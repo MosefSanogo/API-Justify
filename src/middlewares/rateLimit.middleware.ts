@@ -10,7 +10,7 @@ function rateLimitMiddleware(req: Request, res: Response, next: NextFunction) {
       tokenData!.wordUsedToday = 0;
       tokenData!.lastDate = today;
     }
-    
+
     const text = req.body as string;
     const wordCount = text.trim().split(/\s+/).length;
     if (tokenData!.wordUsedToday + wordCount > 80000) {
