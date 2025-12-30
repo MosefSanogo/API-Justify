@@ -1,6 +1,6 @@
 import { TokenData, tokenStore } from "../storage/memory.store";
 
-function generateToken(email: string): string {
+export function generateToken(email: string): string {
   const token = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2); // methode token generation
   const tokenData: TokenData = {
     email,
