@@ -3,11 +3,11 @@ import { Request, Response, NextFunction } from "express";
 function authMiddleware(req:Request, res:Response, next:NextFunction) {
   const authHeader = req.headers['authorization'];
   if (!authHeader) {
-    return res.status(401).json({ message: 'Authorization header missing' });
+    return res.status(401).send({ message: 'Authorization header missing' });
   }
     const token = authHeader.replace('Bearer ', '');
     if (!tokenStore.has(token)) {
-      return res.status(401).json({ message: 'Invalid token' });
+      return res.status(401).send({ message: 'Invalid token' });
     }
     (req as any).token = token;
     next(); 

@@ -10,7 +10,7 @@ router.post("/justify", authMiddleware, rateLimitMiddleware, (req, res) => {
         return res.status(400).json({ message: 'Content-Type must be text/plain' });
     }
 
-    res.send(justifyText(text));
+    res.status(200).send(justifyText(text));
 });
 
 export default router;
