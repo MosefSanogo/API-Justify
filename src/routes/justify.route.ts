@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { authMiddleware } from "../middlewares/auth.middleware";
-import { rateLimitMiddleware } from "../middlewares/rateLimit.middleware";
-import { justifyText } from "../services/justify.service";
+import { authMiddleware } from "../middlewares/auth.middleware.js";
+import { rateLimitMiddleware } from "../middlewares/rateLimit.middleware.js";
+import { justifyText } from "../services/justify.service.js";
 const router = Router();
 
 router.post("/justify", authMiddleware, rateLimitMiddleware, (req, res) => {

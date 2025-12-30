@@ -1,6 +1,6 @@
 import express from "express";
-import tokenRoute from "./routes/token.route";
-import justifyRoute from "./routes/justify.route";
+import tokenRoute from "./routes/token.route.js";
+import justifyRoute from "./routes/justify.route.js";
 
 const app = express();
 app.use(express.text());

@@ -1,4 +1,4 @@
-import { TokenData, tokenStore } from "../storage/memory.store";
+import { TokenData, tokenStore } from "../storage/memory.store.js";
 
 export function generateToken(email: string): string {
   const token = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2); // methode token generation

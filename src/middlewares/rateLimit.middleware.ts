@@ -1,4 +1,4 @@
-import { tokenStore } from "../storage/memory.store";
+import { tokenStore } from "../storage/memory.store.js";
 import { Request, Response, NextFunction } from "express";
 
 function rateLimitMiddleware(req: Request, res: Response, next: NextFunction) {
