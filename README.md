@@ -102,9 +102,9 @@ http://localhost:3000
 ```
 ## Exemple avec curl
 ```
-curl -X POST http://localhost:3000/api/justify \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -H "Content-Type: text/plain" \
+curl -X POST https://api-justify-5gzj.onrender.com/api/justify 
+  -H "Authorization: Bearer YOUR_TOKEN" 
+  -H "Content-Type: text/plain" 
   --data "Votre texte à justifier ici"
 ```
 ## Contraintes respectées
